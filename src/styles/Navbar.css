@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+/* ── Navbar ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+  height: 72px;
+
+  background: rgba(255, 252, 249, 0.9);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+/* ── Logo / Brand ── */
+.nav-brand {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #c96a2e;
+  text-decoration: none;
+  letter-spacing: -1px;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+.nav-brand:hover {
+  opacity: 0.85;
+}
+
+/* ── Links Container ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* ── Nav Links ── */
+.nav-links a {
+  font-family: 'Instrument Sans', sans-serif;
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Hover */
+.nav-links a:hover {
+  color: #c96a2e;
+}
+
+/* Active Link (simple aesthetic) */
+.nav-links a.active {
+  color: #c96a2e;
+  font-weight: 600;
+}
+
+/* REMOVE all borders/lines */
+.nav-links a.active::before,
+.nav-links a.active::after {
+  display: none;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+    height: 65px;
+  }
+
+  .nav-brand {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
